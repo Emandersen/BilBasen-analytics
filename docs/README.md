@@ -8,6 +8,7 @@ Welcome to the BilBasen Analytics documentation. This project consists of a Spri
 - **[FOLDER_STRUCTURE.md](./FOLDER_STRUCTURE.md)** - Detailed folder structure and organization of the project
 - **[BILBASEN_API_REFERENCE.md](./BILBASEN_API_REFERENCE.md)** - Documented API of the popular Danish car Market, BilBasen
 
+
 ## Quick Overview
 
 ### Backend
