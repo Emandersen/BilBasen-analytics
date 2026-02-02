@@ -7,6 +7,7 @@ Welcome to the BilBasen Analytics documentation. This project consists of a Spri
 - **[TECH_STACK.md](./TECH_STACK.md)** - Complete overview of technologies, frameworks, and libraries used in both backend and frontend
 - **[FOLDER_STRUCTURE.md](./FOLDER_STRUCTURE.md)** - Detailed folder structure and organization of the project
 - **[BILBASEN_API_REFERENCE.md](./BILBASEN_API_REFERENCE.md)** - Documented API of the popular Danish car Market, BilBasen
+- **[FETCHING_MAKES_AND_MODELS.md](FETCHING_MAKES_AND_MODELS.md)** - Description of how to fetch make and model filters from BilBasen
 
 ## Quick Overview
 
