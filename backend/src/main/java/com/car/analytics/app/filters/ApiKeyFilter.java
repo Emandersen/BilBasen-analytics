@@ -31,13 +31,8 @@ public class ApiKeyFilter extends OncePerRequestFilter {
             throws java.io.IOException, ServletException {
         
         String apiKey = request.getHeader(API_HEADER);
-        String path = request.getRequestURI();
-        
-        System.out.println("=== ApiKeyFilter ===");
-        System.out.println("Path: " + path);
-        System.out.println("API Key received: " + apiKey);
-        System.out.println("Valid API Key: " + validApiKey);
-        System.out.println("Keys match: " + validApiKey.equals(apiKey));
+
+
         
         if (validApiKey.equals(apiKey)) {
             UsernamePasswordAuthenticationToken authentication = 
