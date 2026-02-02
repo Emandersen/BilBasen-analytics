@@ -1,5 +1,6 @@
 package com.car.analytics.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +16,7 @@ import lombok.Setter;
 @Table(name = "PriceHistory")
 @Getter
 @Setter
-public class PriceHistory {
+public class CarPriceHistory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +25,7 @@ public class PriceHistory {
     private int price;
     private String recordedAt;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "car_external_id", referencedColumnName = "car_external_id")
     private Car car;

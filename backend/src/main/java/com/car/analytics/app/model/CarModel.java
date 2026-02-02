@@ -1,5 +1,6 @@
 package com.car.analytics.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class CarModel {
     private String variant;
     private int year;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "carModel", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Car> cars = new ArrayList<>();
 }
