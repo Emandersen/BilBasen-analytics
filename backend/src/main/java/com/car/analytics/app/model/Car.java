@@ -1,16 +1,8 @@
 package com.car.analytics.app.model;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,15 +16,12 @@ public class Car {
     @Column(name = "car_external_id")
     private Long externalId;
 
+    @ManyToOne
+    @JoinColumn(name = "car_model_id")
+    private CarModel carModel;
 
-    private String make;
-    private String model;
-    private String variant;
-
-    private int year;
     private String firstRegistration;
     private int mileage;
-
     private String engineType; 
 
     @OneToOne(cascade = CascadeType.ALL)
