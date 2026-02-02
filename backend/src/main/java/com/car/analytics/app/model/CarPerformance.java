@@ -1,5 +1,6 @@
 package com.car.analytics.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -27,6 +28,7 @@ public class CarPerformance {
     private int gears; 
     private int towingCapacity;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "carPerformance")
     private Car car;
 }

@@ -1,6 +1,14 @@
 package com.car.analytics.app.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
@@ -33,5 +41,5 @@ public class Car {
     private CarEconomics carEconomics;
 
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<PriceHistory> priceHistories = new ArrayList<>();
+    private List<CarPriceHistory> priceHistories = new ArrayList<>();
 }

@@ -1,5 +1,6 @@
 package com.car.analytics.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -23,6 +24,7 @@ public class CarEconomics {
     private java.math.BigDecimal annualTax;
     private String euroStandard;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "carEconomics")
     private Car car;
 
