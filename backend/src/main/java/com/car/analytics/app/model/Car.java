@@ -40,6 +40,10 @@ public class Car {
     @JoinColumn(name = "car_economics_id", referencedColumnName = "id")
     private CarEconomics carEconomics;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "car_location_id", referencedColumnName = "id")
+    private CarLocation carLocation;
+
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CarPriceHistory> priceHistories = new ArrayList<>();
 }
